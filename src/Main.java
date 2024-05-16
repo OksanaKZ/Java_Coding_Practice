@@ -2,7 +2,7 @@ import java.time.LocalDate;
 import java.util.Scanner;
 
 class Main {
-
+    
     //принимает имя и возраст
     public static void getNameAge(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -175,4 +175,23 @@ class Main {
         return result;
     };
 
+    //задача про кинотеатр: принимает на вход ряд и место, 
+    //возвращает "Sold" (если место занято - 1) и "Free" (если место свободно - 0)
+    public class Cinema {
+        public static void main(String[] args) {
+            int[][] seats = {
+            {0, 0, 0, 1, 1, 1, 0, 0, 1, 1},
+            {1, 1, 0, 1, 0, 1, 1, 0, 0, 0},
+            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+            {0, 0, 0, 1, 1, 1, 1, 0, 0, 0},
+            {0, 1, 1, 1, 0, 0, 0, 1, 1, 1},
+            };
+            Scanner sr = new Scanner(System.in);
+            int row = sc.nextInt();
+            int column = sc.nextInt();
+            if(seats[row][column] == 0) {
+                System.out.println("Free");
+            } else {System.out.println("Sold");
+            }
+    }
 };
